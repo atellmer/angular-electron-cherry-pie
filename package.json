@@ -45,6 +45,7 @@
     "clean-webpack-plugin": "^0.1.14",
     "cli-color": "^1.1.0",
     "codelyzer": "^2.0.0-beta.4",
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.26.1",
     "cssnano": "^3.9.1",
     "electron": "^1.4.10",

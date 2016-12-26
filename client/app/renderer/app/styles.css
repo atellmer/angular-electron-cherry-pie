@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic,cyrillic-ext');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import '../../../../node_modules/@angular/material/core/theming/prebuilt/indigo-pink.css';
 @import './variables.css';
 
 @reset-global pc;
@@ -26,4 +27,57 @@ body {
   font-family: 'Roboto';
   -webkit-tap-highlight-color: transparent;
   background-color: cornflowerblue;
+}
+
+:host {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.appbar-layout {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: var(--appbarZIndex);
+  width: 100%;
+  height: auto;
+}
+
+.content-layout {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.panel-layout {
+  position: relative;
+  z-index: calc(var(--panelZIndex) - 1);
+  flex-basis: 100%;
+  height: 100%;
+
+  @media (min-width: 600px) {
+    flex-basis: 300px;
+    z-index: var(--panelZIndex);
+  }
+
+  @media (min-width: 768px) {
+    flex-basis: 320px;
+  }
+}
+
+.canvas-layout {
+  position: relative;
+  z-index: var(--canvasZIndex);
+  flex-grow: 1;
+  height: 100%;
 }
