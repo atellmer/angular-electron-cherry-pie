@@ -6,6 +6,7 @@ import { MaterialModule } from '@angular/material';
 
 // Components
 import { AppComponent } from './app.component';
+import { RootLayoutComponent } from './components//root-layout/root-layout.component';
 import { AppbarComponent } from './components/appbar/appbar.component';
 import { AvatarComponent } from './components/avatar/avatar.component';
 import { LogoComponent } from './components//logo/logo.component';
@@ -26,6 +27,7 @@ import { FakeUserService } from './services//fake-user.service';
   ],
   declarations: [
     AppComponent,
+    RootLayoutComponent,
     AppbarComponent,
     AvatarComponent,
     LogoComponent,
