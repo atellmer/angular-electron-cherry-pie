@@ -3,6 +3,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
+var CopyWebpackPlugin = require ('copy-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpackTargetElectronRenderer = require('webpack-target-electron-renderer');
 var clc = require('cli-color');
@@ -74,6 +75,12 @@ var webpackConfig = {
         verbose: true,
         dry: false,
     }),
+    new CopyWebpackPlugin([
+      { 
+        from: 'client/app/renderer/assets/',
+        to: 'assets/'
+      }
+    ]),
     new HtmlWebpackPlugin({
       inject: false,
       environment: config.mode,
