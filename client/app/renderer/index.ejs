@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Cherry Pie Desktop</title>
+    <% if (htmlWebpackPlugin.options.environment === 'development') { %>
+      <base href="/">
+    <% } else { %>
+      <base href="./">
+    <% } %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  </head>
+
+  <body>
+    <app-root>Loading...</app-root>
+  </body>
+
+  <script src="polyfills.js"></script>
+  <script src="vendor.js"></script>
+  <script src="app.js"></script>
+
+</html>

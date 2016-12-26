@@ -1,0 +1,7 @@
+{
+  "name": "electron",
+  "version": "0.0.1",
+  "description": "electron app",
+  "author": "AlexPlex",
+  "main": "dist/electron.js"
+}
