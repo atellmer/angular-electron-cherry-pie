@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, ipcMain } from 'electron';
 import { join } from 'path';
 import { format } from 'url';
 import { environment } from '../environment';
@@ -39,4 +39,10 @@ app.on('activate', () => {
   if (mainWindow === null) {
     createWindow();
   }
+});
+
+ipcMain.on('render-init', (ev, data) => {
+  console.log(data);
+
+  ev.sender.send('main-init', 'Main Process Init!');
 });
