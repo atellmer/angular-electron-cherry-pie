@@ -4,17 +4,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
+// Modules
+import { UIModule } from './components/ui-module/ui.module';
+
 // Components
 import { AppComponent } from './app.component';
 import { RootLayoutComponent } from './components//root-layout/root-layout.component';
 import { AppbarComponent } from './components/appbar/appbar.component';
-import { AvatarComponent } from './components/avatar/avatar.component';
 import { LogoComponent } from './components//logo/logo.component';
-import { CanvasComponent } from './components/canvas/canvas.component';
 import { PanelComponent } from './components/panel/panel.component';
+import { CanvasComponent } from './components/canvas/canvas.component';
 
 // Services
-import { FakeUserService } from './services//fake-user.service';
+import { FakeUserService } from './shared/services//fake-user.service';
 
 
 @NgModule({
@@ -23,16 +25,16 @@ import { FakeUserService } from './services//fake-user.service';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
+    UIModule
   ],
   declarations: [
     AppComponent,
     RootLayoutComponent,
     AppbarComponent,
-    AvatarComponent,
     LogoComponent,
-    CanvasComponent,
-    PanelComponent
+    PanelComponent,
+    CanvasComponent
   ],
   providers: [FakeUserService],
   bootstrap: [AppComponent]

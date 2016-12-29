@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'tm-panel',
-  templateUrl: './panel.component.html',
-  styleUrls: ['./panel.component.css']
+  templateUrl: 'panel.component.html',
+  styleUrls: ['panel.component.css']
 })
 export class PanelComponent implements OnInit {
 

@@ -7,8 +7,8 @@ import {
 
 @Component({
   selector: 'tm-avatar',
-  templateUrl: './avatar.component.html',
-  styleUrls: ['./avatar.component.css']
+  templateUrl: 'avatar.component.html',
+  styleUrls: ['avatar.component.css']
 })
 export class AvatarComponent implements OnInit {
   @Input() source: string;

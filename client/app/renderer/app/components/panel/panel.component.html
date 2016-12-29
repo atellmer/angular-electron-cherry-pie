@@ -1,7 +1,18 @@
 <div class="root">
-  <div class="header-layout">
-    <div class="logo-layout">
+  <div class="l-header">
+    <div class="l-logo">
       <tm-logo></tm-logo>
     </div>
+    <div class="l-searchbar">
+      <tm-searchbar></tm-searchbar>
+    </div>
+    <md-tab-group [selectedIndex]="0">
+      <md-tab label="Все">
+        <h1>Tab 1</h1>
+      </md-tab>
+      <md-tab label="Новые">
+        <h1>Tab 2</h1>
+      </md-tab>
+    </md-tab-group>
   </div>
 </div>
