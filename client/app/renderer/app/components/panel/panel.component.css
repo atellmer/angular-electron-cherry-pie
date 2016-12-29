@@ -16,11 +16,11 @@
   box-shadow: var(--shadowElevationZ1);
 }
 
-.header-layout {
+.l-header {
   background-color: var(--primaryColorFirst);
 }
 
-.logo-layout {
+.l-logo {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -33,4 +33,12 @@
   @media (max-width: 600px) {
     display: none;
   }
+}
+
+.l-searchbar {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  width: 100%;
+  height: 56px;
 }
