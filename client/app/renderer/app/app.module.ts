@@ -14,7 +14,6 @@ import { AppbarComponent } from './components/appbar/appbar.component';
 import { LogoComponent } from './components//logo/logo.component';
 import { PanelComponent } from './components/panel/panel.component';
 import { CanvasComponent } from './components/canvas/canvas.component';
-import { PanelComponent } from './components/panel/panel.component';
 
 // Services
 import { FakeUserService } from './shared/services//fake-user.service';
@@ -36,7 +35,6 @@ import { FakeUserService } from './shared/services//fake-user.service';
     LogoComponent,
     PanelComponent,
     CanvasComponent
-    PanelComponent
   ],
   providers: [FakeUserService],
   bootstrap: [AppComponent]
