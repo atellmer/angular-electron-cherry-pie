@@ -14,6 +14,7 @@ import { AppbarComponent } from './components/appbar/appbar.component';
 import { LogoComponent } from './components//logo/logo.component';
 import { PanelComponent } from './components/panel/panel.component';
 import { CanvasComponent } from './components/canvas/canvas.component';
+import { DialogItemComponent } from './components/dialog-item/dialog-item.component';
 
 // Services
 import { FakeUserService } from './shared/services//fake-user.service';
@@ -34,7 +35,8 @@ import { FakeUserService } from './shared/services//fake-user.service';
     AppbarComponent,
     LogoComponent,
     PanelComponent,
-    CanvasComponent
+    CanvasComponent,
+    DialogItemComponent
   ],
   providers: [FakeUserService],
   bootstrap: [AppComponent]

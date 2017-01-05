@@ -4,6 +4,7 @@ import { MaterialModule } from '@angular/material';
 // Components
 import { SearchbarComponent }   from './searchbar/searchbar.component';
 import { AvatarComponent } from './avatar/avatar.component';
+import { BadgeComponent } from './badge/badge.component';
 
 
 @NgModule({
@@ -12,11 +13,13 @@ import { AvatarComponent } from './avatar/avatar.component';
   ],
   exports: [
     SearchbarComponent,
-    AvatarComponent
+    AvatarComponent,
+    BadgeComponent
   ],
   declarations: [
     SearchbarComponent,
-    AvatarComponent
+    AvatarComponent,
+    BadgeComponent
   ],
   providers: [],
 })
