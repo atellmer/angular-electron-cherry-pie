@@ -17,7 +17,7 @@ export class User implements IUser {
     last: 'EMPTY'
   };
   public avatar: { thumbnail: string } = {
-    thumbnail: 'EMPTY'
+    thumbnail: ''
   };
   public online: boolean = false;
 

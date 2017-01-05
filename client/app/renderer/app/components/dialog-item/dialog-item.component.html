@@ -1,0 +1,36 @@
+<div class="root">
+  <div class="flex">
+    <div class="box">
+      <div
+        [ngClass]="{
+          'online': dialog.user.online,
+          'offline': !dialog.user.online
+        }"
+        class="l-avatar">
+        <tm-avatar
+          [source]="dialog.user.avatar.thumbnail"
+          width="48"
+          height="48">
+        </tm-avatar>
+      </div>
+    </div>
+    <div class="box flex-auto l-message">
+      <div class="message">
+        <div class="name text-clip">
+          {{dialog.user.name.first}} {{dialog.user.name.last}}
+        </div>
+        <div class="text text-clip">
+          {{dialog.message.value.text}}
+        </div>
+        <div class="indicators">
+          <md-icon *ngIf="dialog.message.status.delivered" class="icon">done</md-icon>
+          <md-icon *ngIf="dialog.message.status.read" class="icon">done_all</md-icon>
+          <div *ngIf="dialog.message.status.new" class="l-badge">
+             <tm-badge count="5"></tm-badge>
+          </div>
+          <div class="timestamp">{{dialog.message.timestamp | date}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
