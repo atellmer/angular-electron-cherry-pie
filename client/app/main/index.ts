@@ -14,8 +14,6 @@ const createWindow = () => {
     minHeight: 500
   });
 
-  mainWindow.webContents.openDevTools();
-
   mainWindow.loadURL(format({
     pathname: environment.development ? 'localhost:3000' : join(__dirname, 'index.html'),
     protocol: environment.development ? 'http:' : 'file:',
@@ -25,6 +23,10 @@ const createWindow = () => {
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
+
+  if (environment.development) {
+    mainWindow.webContents.openDevTools();
+  }
 };
 
 app.on('ready', createWindow);

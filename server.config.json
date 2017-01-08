@@ -6,5 +6,9 @@
     "./client/public/dist/electron.js",
     "./client/public/dist/app.js"
   ],
-  "server": { "baseDir": "./client/public/dist" }
+  "server": {
+    "baseDir": "./client/public/dist"
+  },
+  "notify": false,
+  "open": false
 }
