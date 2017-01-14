@@ -20,13 +20,7 @@ import { IDialog } from '../shared/models/dialog-item.model';
   styleUrls: ['styles.css'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `
-  <tm-root-layout [me]="me$" [dialogs]="dialogs$">
-    <ngrx-store-log-monitor
-      toggleCommand="ctrl-h"
-      positionCommand="ctrl-m">
-    </ngrx-store-log-monitor>
-  </tm-root-layout>`
+  template: `<tm-root-layout [me]="me$" [dialogs]="dialogs$"></tm-root-layout>`
 })
 export class AppComponent implements OnInit {
   public me$: Observable<IUser>;

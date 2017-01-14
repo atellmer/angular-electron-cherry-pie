@@ -25,6 +25,9 @@ const createWindow = () => {
   });
 
   if (environment.development) {
+    const loadDevtool = require('electron-load-devtool');
+
+    loadDevtool(loadDevtool.REDUX_DEVTOOLS);
     mainWindow.webContents.openDevTools();
   }
 };
