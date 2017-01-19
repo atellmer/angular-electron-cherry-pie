@@ -1,29 +1,23 @@
-import { ipcRenderer } from 'electron';
 import {
   Component,
   OnInit,
-  ViewEncapsulation,
   ChangeDetectionStrategy
 } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 
-import * as fromRoot from '../reducers';
-import { UserActions } from '../actions/user';
-import { FakeUserService } from '../shared/services/fake-user.service';
-import { IUser } from '../shared/models/user.model';
-import { IDialog } from '../shared/models/dialog-item.model';
+import * as fromRoot from '../../reducers';
+import { UserActions } from '../../actions/user';
+import { FakeUserService } from '../../shared/services/fake-user.service';
+import { IDialog } from '../../shared/models/dialog-item.model';
 
 
 @Component({
-  selector: 'tm-app-root',
-  styleUrls: ['styles.css'],
-  encapsulation: ViewEncapsulation.None,
+  selector: 'tm-panel-container',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `<tm-root-layout [me]="me$" [dialogs]="dialogs$"></tm-root-layout>`
+  template: `<tm-panel [dialogs]="dialogs$ | async"></tm-panel>`,
 })
-export class AppComponent implements OnInit {
-  public me$: Observable<IUser>;
+export class PanelContainerComponent implements OnInit {
   public dialogs$: Observable<IDialog[]>;
 
   constructor(
@@ -31,42 +25,11 @@ export class AppComponent implements OnInit {
     private fakeUserService: FakeUserService,
     private userActions: UserActions
   ) {
-    this.me$ = this.store.select(state => state.user.me);
     this.dialogs$ = this.store.select(state => state.user.dialogs);
   }
 
   ngOnInit() {
-    ipcRenderer.send('render-init', 'Render Process Init!');
-
-    ipcRenderer.on('main-init', (ev, data) => {
-      console.log(data);
-    });
-
-    this.fetchUser();
     this.fetchDialogs();
-  }
-
-  fetchUser() {
-    this.fakeUserService
-      .getFakeUser({ results: 1 })
-      .map(res => {
-        return res.results.map(item => {
-          return {
-            id: item.login.salt,
-            name: {
-              first: item.name.first,
-              last: item.name.last
-            },
-            avatar: {
-              thumbnail: item.picture.thumbnail
-            },
-            online: true
-          };
-        });
-      })
-      .subscribe((res: Array<IUser>) => {
-        this.store.dispatch(this.userActions.fetchUser(res[0]));
-      });
   }
 
   fetchDialogs() {

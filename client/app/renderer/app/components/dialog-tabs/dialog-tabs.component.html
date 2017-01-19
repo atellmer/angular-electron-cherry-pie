@@ -1,0 +1,11 @@
+<md-tab-group [selectedIndex]="0">
+  <md-tab label="Все">
+    <tm-dialog-item
+      *ngFor="let dialog of dialogs"
+      [dialog]="dialog">
+    </tm-dialog-item>
+  </md-tab>
+  <md-tab label="Новые">
+    <h1>Tab 2</h1>
+  </md-tab>
+</md-tab-group>

@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '@angular/material';
 
 // Components
-import { SearchbarComponent }   from './searchbar/searchbar.component';
-import { AvatarComponent } from './avatar/avatar.component';
-import { BadgeComponent } from './badge/badge.component';
+import { SearchbarComponent }   from './searchbar';
+import { AvatarComponent } from './avatar';
+import { BadgeComponent } from './badge';
 
 
 @NgModule({
