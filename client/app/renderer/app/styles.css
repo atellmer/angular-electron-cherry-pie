@@ -39,7 +39,7 @@ body {
   height: 100%;
 }
 
-/* HACKS for angular material 2 */
+/* fix for angular material 2 */
 .md-tab-header-pagination {
   display: none !important;
 }
@@ -56,4 +56,23 @@ md-ink-bar {
 .md-tab-label {
   color: #fff !important;
   text-transform: uppercase;
+}
+
+/* fix for Scrollbar */
+.ps-scrollbar-y-rail {
+  background-color: transparent !important;
+
+  &:hover {
+    background-color: transparent !important;
+  }
+}
+
+.ps-scrollbar-y {
+  width: 6px !important;
+  background-color: rgba(0, 0, 0, 0.4) !important;
+
+  &:hover {
+    width: 6px !important;
+    cursor: pointer;
+  }
 }

@@ -149,6 +149,12 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+angular2-perfect-scrollbar@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/angular2-perfect-scrollbar/-/angular2-perfect-scrollbar-2.0.2.tgz#702a773911224681b6b79fc588a6702ca82ec230"
+  dependencies:
+    perfect-scrollbar "~0.6.0"
+
 angular2-template-loader@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/angular2-template-loader/-/angular2-template-loader-0.6.0.tgz#8a7fae4cf5a2494968da512aa43152a82a0c99b6"
@@ -3249,6 +3255,10 @@ pbkdf2-compat@2.0.1:
 pend@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/pend/-/pend-1.2.0.tgz#7a57eb550a6783f9115331fcf4663d5c8e007a50"
+
+perfect-scrollbar@~0.6.0:
+  version "0.6.16"
+  resolved "https://registry.yarnpkg.com/perfect-scrollbar/-/perfect-scrollbar-0.6.16.tgz#b1d61a5245cf3962bb9a8407a3fc669d923212fc"
 
 pify@^2.0.0, pify@^2.3.0:
   version "2.3.0"

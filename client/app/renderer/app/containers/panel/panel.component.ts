@@ -34,7 +34,7 @@ export class PanelContainerComponent implements OnInit {
 
   fetchDialogs() {
     this.fakeUserService
-      .getFakeUser({ results: 10 })
+      .getFakeUser({ results: 20 })
       .map(res => {
         return res.results.map((item, index) => {
           return {

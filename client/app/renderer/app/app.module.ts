@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { MaterialModule } from '@angular/material';
+import { PerfectScrollbarModule } from 'angular2-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'angular2-perfect-scrollbar';
 
 // Modules
 import { UIModule } from './components/ui-module';
@@ -30,6 +32,10 @@ import { UserActions } from './actions/user';
 import { rootReducer } from './reducers';
 
 
+const PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: true
+};
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -39,6 +45,7 @@ import { rootReducer } from './reducers';
     StoreModule.provideStore(rootReducer),
     StoreDevtoolsModule.instrumentOnlyWithExtension(),
     MaterialModule.forRoot(),
+    PerfectScrollbarModule.forRoot(PERFECT_SCROLLBAR_CONFIG),
     UIModule
   ],
   declarations: [
