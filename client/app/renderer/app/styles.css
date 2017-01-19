@@ -39,6 +39,21 @@ body {
   height: 100%;
 }
 
+/* HACKS for angular material 2 */
 .md-tab-header-pagination {
   display: none !important;
+}
+
+.md-tab-header,
+[md-tab-nav-bar] {
+  border-bottom: none;
+}
+
+md-ink-bar {
+  background-color: var(--accentColor);
+}
+
+.md-tab-label {
+  color: #fff !important;
+  text-transform: uppercase;
 }

@@ -8,6 +8,9 @@
       "ignoreAtRules": [
         "reset-global"
       ]
+    }],
+    "selector-type-no-unknown": [true, {
+      "ignoreTypes": ["/^tm-/", "/^md-/"]
     }]
   }
 }
