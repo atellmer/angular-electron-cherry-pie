@@ -52,7 +52,6 @@
     "cli-color": "^1.1.0",
     "codelyzer": "^2.0.0-beta.4",
     "concurrently": "^3.1.0",
-    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.26.1",
     "cssnano": "^3.9.1",
     "electron": "^1.4.10",
@@ -78,7 +77,6 @@
     "tslint-loader": "^3.3.0",
     "typescript": "^2.1.4",
     "url-loader": "^0.5.7",
-    "webpack": "^1.14.0",
-    "webpack-target-electron-renderer": "^0.4.0"
+    "webpack": "2.2.0"
   }
 }
