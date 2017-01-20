@@ -106,7 +106,6 @@ const webpackConfig = {
       template: path.resolve(__dirname, `${config.root}/app/renderer/index.ejs`)
     }),
     new webpack.LoaderOptionsPlugin({
-      test: /\.css$/,
       options: {
         tslint: {
           configFile: 'tslint.json',
