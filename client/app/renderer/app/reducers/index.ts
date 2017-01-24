@@ -12,4 +12,8 @@ const reducers = {
   user: fromUser.reducer
 };
 
-export const rootReducer: ActionReducer<AppState> = combineReducers(reducers);
+const reducer = combineReducers(reducers);
+
+export function rootReducer(state: any, action: any): ActionReducer<AppState> {
+  return reducer(state, action);
+}

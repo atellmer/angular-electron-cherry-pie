@@ -111,15 +111,14 @@ const webpackConfig = {
           configFile: 'tslint.json',
           emitErrors: true
         },
-        postcss: (webpack) => {
+        postcss: () => {
           return [
             require('stylelint')(),
             require('postcss-import')(),
             require('postcss-url')(),
             require('postcss-css-reset')(),
             require('postcss-cssnext')({
-              browsers: ['> 1%'],
-              warnForDuplicates: true,
+              warnForDuplicates: false,
             }),
             require('postcss-browser-reporter')(),
             require('postcss-reporter')(),

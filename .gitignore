@@ -36,3 +36,7 @@ Thumbs.db
 
 /electron-dist
 /client/public
+
+/ngfactory
+client/app/**/*.js
+client/app/**/*.map

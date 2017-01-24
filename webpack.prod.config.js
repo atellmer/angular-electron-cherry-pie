@@ -2,6 +2,7 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const AotPlugin = require('@ngtools/webpack').AotPlugin;
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const clc = require('cli-color');
@@ -19,7 +20,7 @@ const webpackConfig = {
   devtool: false,
   resolve: {
     modules: ['node_modules'],
-    extensions: ['.ts', '.js', '.json', '.css', '.html']
+    extensions: ['.js', '.ts', '.json', '.css', '.html']
   },
   entry: {
     'polyfills': path.resolve(__dirname, `${config.root}/app/renderer/polyfills.ts`),
@@ -43,10 +44,7 @@ const webpackConfig = {
       {
         test: /\.ts$/,
         exclude: /node_modules/,
-        use: [
-          { loader: 'ts-loader' },
-          { loader: 'angular2-template-loader' }
-        ]
+        use: '@ngtools/webpack'
       },
       {
         test: /\.css$/,
@@ -111,15 +109,13 @@ const webpackConfig = {
           configFile: 'tslint.json',
           emitErrors: true
         },
-        postcss: (webpack) => {
+        postcss: () => {
           return [
-            require('stylelint')(),
             require('postcss-import')(),
             require('postcss-url')(),
             require('postcss-css-reset')(),
             require('postcss-cssnext')({
-              browsers: ['> 1%'],
-              warnForDuplicates: true,
+              warnForDuplicates: false,
             }),
             require('cssnano')(),
             require('postcss-browser-reporter')(),
@@ -127,6 +123,10 @@ const webpackConfig = {
           ];
         }
       }
+    }),
+    new AotPlugin({
+      tsConfigPath: './tsconfig.json',
+      entryModule: './client/app/renderer/app/app.module#AppModule'
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({

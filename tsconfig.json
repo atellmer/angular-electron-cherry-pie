@@ -18,5 +18,9 @@
   "exclude": [
     "node_modules",
     "dist"
-  ]
+  ],
+  "angularCompilerOptions": {
+    "genDir": "./ngfactory",
+    "skipMetadataEmit" : true
+  }
 }
