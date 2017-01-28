@@ -131,7 +131,11 @@ const webpackConfig = {
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       exclude: 'electron.js',
-      minimize: true
+      minimize: true,
+      compress: {
+        warnings: false
+      },
+      comments: false
     })
   ],
   node: {
