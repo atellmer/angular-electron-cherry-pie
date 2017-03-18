@@ -96,7 +96,7 @@ const webpackConfig = {
         dry: false,
     }),
     new webpack.ContextReplacementPlugin(
-      /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+      /angular(\\|\/)core(\\|\/)@angular/,
       __dirname
     ),
     new HtmlWebpackPlugin({
@@ -136,14 +136,14 @@ const webpackConfig = {
     __filename: false
   },
   stats: {
-		assets: true,
-		colors: true,
-		version: false,
-		hash: false,
-		timings: true,
-		chunks: true,
-		chunkModules: false
-	}
+    assets: true,
+    colors: true,
+    version: false,
+    hash: false,
+    timings: true,
+    chunks: true,
+    chunkModules: false
+  }
 }
 
 module.exports = webpackConfig;
