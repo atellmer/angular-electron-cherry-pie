@@ -25,7 +25,6 @@ body {
   font-weight: 400;
   font-size: calc(var(--baseFontSize) * 1px);
   font-family: 'Roboto';
-  -webkit-tap-highlight-color: transparent;
   background-color: cornflowerblue;
 }
 
@@ -40,20 +39,20 @@ body {
 }
 
 /* fix for angular material 2 */
-.md-tab-header-pagination {
+.mat-tab-header-pagination {
   display: none !important;
 }
 
-.md-tab-header,
-[md-tab-nav-bar] {
+.mat-tab-header,
+[mat-tab-nav-bar] {
   border-bottom: none;
 }
 
-md-ink-bar {
+.mat-ink-bar {
   background-color: var(--accentColor);
 }
 
-.md-tab-label {
+.mat-tab-label {
   color: #fff !important;
   text-transform: uppercase;
 }

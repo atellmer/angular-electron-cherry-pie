@@ -9,8 +9,10 @@ import {
 @Component({
   selector: 'tm-app',
   styleUrls: ['styles.css'],
-  template: `<tm-root-layout></tm-root-layout>`,
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  template: `
+    <router-outlet></router-outlet>
+  `
 })
 export class AppComponent implements OnInit {
 

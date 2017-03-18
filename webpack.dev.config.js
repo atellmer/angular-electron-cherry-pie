@@ -44,8 +44,9 @@ const webpackConfig = {
         test: /\.ts$/,
         exclude: /node_modules/,
         use: [
-          { loader: 'ts-loader' },
-          { loader: 'angular2-template-loader' }
+          { loader: 'awesome-typescript-loader' },
+          { loader: 'angular2-template-loader' },
+          { loader: 'angular-router-loader' }
         ]
       },
       {

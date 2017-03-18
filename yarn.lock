@@ -186,6 +186,12 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+angular-router-loader@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/angular-router-loader/-/angular-router-loader-0.5.0.tgz#b81b1480498320d2a9ac7afb24ed7a9e735a5692"
+  dependencies:
+    loader-utils "^0.2.15"
+
 angular2-perfect-scrollbar@2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/angular2-perfect-scrollbar/-/angular2-perfect-scrollbar-2.0.6.tgz#07ea29ef66d1efd5538ee52869fcf53320c9e76d"
@@ -401,6 +407,18 @@ autoprefixer@^6.0.0, autoprefixer@^6.0.2, autoprefixer@^6.3.1:
     num2fraction "^1.2.2"
     postcss "^5.2.8"
     postcss-value-parser "^3.2.3"
+
+awesome-typescript-loader@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/awesome-typescript-loader/-/awesome-typescript-loader-3.1.2.tgz#3df192b91a6285f795ca65e63aad114fbb44f710"
+  dependencies:
+    colors "^1.1.2"
+    enhanced-resolve "^3.1.0"
+    loader-utils "^1.0.2"
+    lodash "^4.17.4"
+    mkdirp "^0.5.1"
+    object-assign "^4.1.1"
+    source-map-support "^0.4.11"
 
 aws-sign2@~0.6.0:
   version "0.6.0"
@@ -965,7 +983,7 @@ colormin@^1.0.5:
     css-color-names "0.0.4"
     has "^1.0.1"
 
-colors@^1.0.3, colors@^1.1.2, colors@~1.1.2:
+colors@^1.1.2, colors@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/colors/-/colors-1.1.2.tgz#168a4701756b6a7f51a12ce0c97bfa28c084ed63"
 
@@ -2759,7 +2777,7 @@ loader-runner@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/loader-runner/-/loader-runner-2.2.0.tgz#824c1b699c4e7a2b6501b85902d5b862bf45b3fa"
 
-loader-utils@0.2.x, loader-utils@^0.2.15, loader-utils@^0.2.16, loader-utils@^0.2.6, loader-utils@^0.2.7, loader-utils@~0.2.2, loader-utils@~0.2.5:
+loader-utils@0.2.x, loader-utils@^0.2.15, loader-utils@^0.2.16, loader-utils@~0.2.2, loader-utils@~0.2.5:
   version "0.2.16"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-0.2.16.tgz#f08632066ed8282835dff88dfb52704765adee6d"
   dependencies:
@@ -2826,7 +2844,7 @@ lodash@^3.10.1:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
-lodash@^4.0.0, lodash@^4.1.0, lodash@^4.11.1, lodash@^4.14.0, lodash@^4.16.4, lodash@^4.5.1, lodash@^4.8.0:
+lodash@^4.0.0, lodash@^4.1.0, lodash@^4.11.1, lodash@^4.14.0, lodash@^4.16.4, lodash@^4.17.4, lodash@^4.5.1, lodash@^4.8.0:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -3041,7 +3059,7 @@ next-tick@~0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-0.2.2.tgz#75da4a927ee5887e39065880065b7336413b310d"
 
-ngc-webpack@^1.2.0:
+ngc-webpack@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/ngc-webpack/-/ngc-webpack-1.2.0.tgz#d4b71f733997b8ee26c669ffb77dbfae21c221ba"
   dependencies:
@@ -3186,9 +3204,13 @@ oauth-sign@~0.8.1:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.8.2.tgz#46a6ab7f0aead8deae9ec0565780b7d4efeb9d43"
 
-object-assign@4.1.0, object-assign@^4.0.1, object-assign@^4.1.0:
+object-assign@4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.0.tgz#7a3b3d0e98063d43f4c03f2e8ae6cd51a86883a0"
+
+object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
 
 object-component@0.0.3:
   version "0.0.3"
@@ -4527,7 +4549,7 @@ semver-dsl@^1.0.1:
   dependencies:
     semver "^5.3.0"
 
-"semver@2 || 3 || 4 || 5", semver@^5.0.1, semver@^5.0.3, semver@^5.1.0, semver@^5.3.0, semver@~5.3.0:
+"semver@2 || 3 || 4 || 5", semver@^5.0.3, semver@^5.1.0, semver@^5.3.0, semver@~5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
 
@@ -4682,11 +4704,11 @@ source-list-map@^0.1.4, source-list-map@~0.1.7:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-0.1.8.tgz#c550b2ab5427f6b3f21f5afead88c4f5587b2106"
 
-source-map-support@^0.4.0, source-map-support@^0.4.2, source-map-support@^0.4.8:
-  version "0.4.8"
-  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.8.tgz#4871918d8a3af07289182e974e32844327b2e98b"
+source-map-support@^0.4.0, source-map-support@^0.4.11, source-map-support@^0.4.2, source-map-support@^0.4.8:
+  version "0.4.14"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.14.tgz#9d4463772598b86271b4f523f6c1f4e02a7d6aef"
   dependencies:
-    source-map "^0.5.3"
+    source-map "^0.5.6"
 
 source-map@0.5.x, source-map@^0.5.3, source-map@^0.5.6, source-map@~0.5.1, source-map@~0.5.3:
   version "0.5.6"
@@ -5106,16 +5128,6 @@ truncate-utf8-bytes@^1.0.0:
   dependencies:
     utf8-byte-length "^1.0.1"
 
-ts-loader@1.3.3:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-1.3.3.tgz#30c6203e1e66b841a88701ed8858f1725d94b026"
-  dependencies:
-    colors "^1.0.3"
-    enhanced-resolve "^3.0.0"
-    loader-utils "^0.2.6"
-    object-assign "^4.1.0"
-    semver "^5.0.1"
-
 ts-node@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-2.1.0.tgz#aa2bf4b2e25c5fb6a7c54701edc3666d3a9db25d"
@@ -5151,14 +5163,15 @@ tsickle@^0.21.0:
     source-map "^0.5.6"
     source-map-support "^0.4.2"
 
-tslint-loader@3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/tslint-loader/-/tslint-loader-3.3.0.tgz#6e6a50fc82e85ff3d1cb53e23dd24ae9e47d91ea"
+tslint-loader@^3.4.3:
+  version "3.4.3"
+  resolved "https://registry.yarnpkg.com/tslint-loader/-/tslint-loader-3.4.3.tgz#ac1eaf57d35eff383d0b008fa67b0813e8b51c54"
   dependencies:
-    loader-utils "^0.2.7"
+    loader-utils "^1.0.2"
     mkdirp "^0.5.1"
-    object-assign "^4.0.1"
+    object-assign "^4.1.1"
     rimraf "^2.4.4"
+    semver "^5.3.0"
 
 tslint@4.2.0:
   version "4.2.0"
