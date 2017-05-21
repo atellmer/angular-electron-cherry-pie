@@ -11,6 +11,7 @@ import {
   styleUrls: ['styles.css'],
   encapsulation: ViewEncapsulation.None,
   template: `
+    <tm-appbar-container></tm-appbar-container>
     <router-outlet></router-outlet>
   `
 })

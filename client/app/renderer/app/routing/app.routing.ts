@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
-import { MessengerComponent } from '../features/messenger/layout';
+import {  MessengerContainerComponent, } from '../features/messenger/containers/messenger';
 
 
 const routes: Routes = [
@@ -12,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'messenger',
-    component: MessengerComponent
+    component: MessengerContainerComponent
   }
 ];
 

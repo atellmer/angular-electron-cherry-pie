@@ -15,7 +15,10 @@ import { IUser } from '../../../../shared/models/user.model';
 @Component({
   selector: 'tm-appbar-container',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `<tm-appbar [me]="me$ | async"></tm-appbar>`,
+  styleUrls: ['appbar.component.css'],
+  template: `
+    <tm-appbar [me]="me$ | async"></tm-appbar>
+  `
 })
 export class AppbarContainerComponent implements OnInit {
   public me$: Observable<IUser>;

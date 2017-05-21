@@ -8,6 +8,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { rootReducer } from '../reducers';
 import { FakeUserService } from '../shared/services/fake-user.service';
+import { PlatformDetector } from '../shared/services/platform-detector.service';
 import { UserActions } from '../actions/user';
 
 
@@ -28,6 +29,7 @@ import { UserActions } from '../actions/user';
   declarations: [],
   providers: [
     FakeUserService,
+    PlatformDetector,
     UserActions
   ],
 })

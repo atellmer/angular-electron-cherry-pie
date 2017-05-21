@@ -1,7 +1,10 @@
 import { NgModule,  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '@angular/material';
-import { PerfectScrollbarModule, PerfectScrollbarConfigInterface } from 'angular2-perfect-scrollbar';
+import {
+  PerfectScrollbarModule,
+  PerfectScrollbarConfigInterface
+} from 'angular2-perfect-scrollbar';
 
 import { UIModule } from '../features/ui';
 
@@ -12,7 +15,7 @@ const PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 
 @NgModule({
   imports: [
-    MaterialModule.forRoot(),
+    MaterialModule,
     PerfectScrollbarModule.forRoot(PERFECT_SCROLLBAR_CONFIG)
   ],
   exports: [
@@ -24,6 +27,4 @@ const PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   declarations: [],
   providers: []
 })
-export class SharedModule {
-
-}
+export class SharedModule {}

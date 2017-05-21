@@ -11,8 +11,8 @@ import { IUser } from '../../../../shared/models/user.model';
 
 @Component({
   selector: 'tm-appbar',
-  templateUrl: './appbar.component.html',
-  styleUrls: ['./appbar.component.css'],
+  templateUrl: 'appbar.component.html',
+  styleUrls: ['appbar.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppbarComponent implements OnInit {

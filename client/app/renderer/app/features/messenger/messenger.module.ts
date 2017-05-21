@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core';
 
 import { SharedModule } from '../../shared';
-import { AppbarContainerComponent } from './containers/appbar';
 import { PanelContainerComponent } from './containers/panel';
 
-import { MessengerComponent } from './layout';
-import { AppbarComponent } from './components/appbar';
-import { LogoComponent } from './components/logo';
+import { MessengerContainerComponent } from './containers/messenger';
 import { PanelComponent } from './components/panel';
 import { CanvasComponent } from './components/canvas';
 import { DialogItemComponent } from './components/dialog-item';
@@ -17,22 +14,16 @@ import { DialogTabsComponent } from './components/dialog-tabs';
     SharedModule
   ],
   exports: [
-    AppbarContainerComponent,
+    MessengerContainerComponent,
     PanelContainerComponent,
-    MessengerComponent,
-    AppbarComponent,
-    LogoComponent,
     PanelComponent,
     CanvasComponent,
     DialogItemComponent,
     DialogTabsComponent
   ],
   declarations: [
-    AppbarContainerComponent,
+    MessengerContainerComponent,
     PanelContainerComponent,
-    MessengerComponent,
-    AppbarComponent,
-    LogoComponent,
     PanelComponent,
     CanvasComponent,
     DialogItemComponent,
