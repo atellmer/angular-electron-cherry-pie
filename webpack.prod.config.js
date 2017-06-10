@@ -20,13 +20,16 @@ const webpackConfig = {
   devtool: false,
   resolve: {
     modules: ['node_modules'],
-    extensions: ['.js', '.ts', '.json', '.css', '.html']
+    extensions: ['.js', '.ts', '.json', '.css', '.html'],
+    alias: {
+      '@': path.resolve(__dirname, 'client', 'src', 'renderer', 'app')
+    }
   },
   entry: {
-    'polyfills': path.resolve(__dirname, `${config.root}/app/renderer/polyfills.ts`),
-    'vendor': path.resolve(__dirname, `${config.root}/app/renderer/vendor.ts`),
-    'app': path.resolve(__dirname, `${config.root}/app/renderer/main.ts`),
-    'electron': path.resolve(__dirname, `${config.root}/app/main/index.ts`)
+    'polyfills': path.resolve(__dirname, `${config.root}/src/renderer/polyfills.ts`),
+    'vendor': path.resolve(__dirname, `${config.root}/src/renderer/vendor.ts`),
+    'app': path.resolve(__dirname, `${config.root}/src/renderer/main.ts`),
+    'electron': path.resolve(__dirname, `${config.root}/src/main/index.ts`)
   },
   output: {
     path: path.resolve(__dirname, output),
@@ -101,7 +104,7 @@ const webpackConfig = {
       inject: false,
       environment: config.mode,
       filename: path.resolve(__dirname, `${output}index.html`),
-      template: path.resolve(__dirname, `${config.root}/app/renderer/index.ejs`)
+      template: path.resolve(__dirname, `${config.root}/src/renderer/index.ejs`)
     }),
     new webpack.LoaderOptionsPlugin({
       options: {
@@ -126,7 +129,7 @@ const webpackConfig = {
     }),
     new AotPlugin({
       tsConfigPath: './tsconfig.json',
-      entryModule: './client/app/renderer/app/app.module#AppModule'
+      entryModule: './client/src/renderer/app/app.module#AppModule'
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({

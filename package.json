@@ -17,7 +17,7 @@
     "server": "lite-server -c server.config.json",
     "build:dev": "set NODE_ENV=development&& npm run clean && npm run copy-files && webpack --config webpack.dev.config.js --watch",
     "build:prod": "set NODE_ENV=production&& npm run copy-files && npm run aot && webpack --config webpack.prod.config.js",
-    "copy-files": "cp client/app/package.json client/public/",
+    "copy-files": "cp client/src/package.json client/public/",
     "clean": "rimraf ./ngfactory",
     "aot": "ngc-w -p tsconfig.json --webpack webpack.prod.config.js",
     "electron": "electron client/public/",

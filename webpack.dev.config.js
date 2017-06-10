@@ -19,13 +19,16 @@ const webpackConfig = {
   devtool: 'eval',
   resolve: {
     modules: ['node_modules'],
-    extensions: ['.ts', '.js', '.json', '.css', '.html']
+    extensions: ['.ts', '.js', '.json', '.css', '.html'],
+    alias: {
+      '@': path.resolve(__dirname, 'client', 'src', 'renderer', 'app')
+    }
   },
   entry: {
-    'polyfills': path.resolve(__dirname, `${config.root}/app/renderer/polyfills.ts`),
-    'vendor': path.resolve(__dirname, `${config.root}/app/renderer/vendor.ts`),
-    'app': path.resolve(__dirname, `${config.root}/app/renderer/main.ts`),
-    'electron': path.resolve(__dirname, `${config.root}/app/main/index.ts`)
+    'polyfills': path.resolve(__dirname, `${config.root}/src/renderer/polyfills.ts`),
+    'vendor': path.resolve(__dirname, `${config.root}/src/renderer/vendor.ts`),
+    'app': path.resolve(__dirname, `${config.root}/src/renderer/main.ts`),
+    'electron': path.resolve(__dirname, `${config.root}/src/main/index.ts`)
   },
   output: {
     path: path.resolve(__dirname, output),
@@ -104,7 +107,7 @@ const webpackConfig = {
       inject: false,
       environment: config.mode,
       filename: path.resolve(__dirname, `${output}index.html`),
-      template: path.resolve(__dirname, `${config.root}/app/renderer/index.ejs`)
+      template: path.resolve(__dirname, `${config.root}/src/renderer/index.ejs`)
     }),
     new webpack.LoaderOptionsPlugin({
       options: {
