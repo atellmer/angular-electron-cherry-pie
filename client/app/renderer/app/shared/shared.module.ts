@@ -1,10 +1,10 @@
-import { NgModule,  } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '@angular/material';
 import {
   PerfectScrollbarModule,
   PerfectScrollbarConfigInterface
-} from 'angular2-perfect-scrollbar';
+} from 'ngx-perfect-scrollbar';
 
 import { UIModule } from '../features/ui';
 
