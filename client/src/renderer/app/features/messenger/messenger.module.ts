@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { SharedModule } from '../../shared';
+import { SharedModule } from '@/shared';
 import { PanelContainerComponent } from './containers/panel';
 
 import { MessengerContainerComponent } from './containers/messenger';

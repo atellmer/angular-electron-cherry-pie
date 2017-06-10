@@ -92,6 +92,7 @@ const webpackConfig = {
     }),
     new CleanWebpackPlugin(
       [path.resolve(__dirname, output)], {
+        exclude: ['theme.css'],
         root: '',
         verbose: true,
         dry: false,

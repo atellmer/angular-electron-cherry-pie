@@ -19,7 +19,7 @@ const webpackConfig = {
   devtool: 'eval',
   resolve: {
     modules: ['node_modules'],
-    extensions: ['.ts', '.js', '.json', '.css', '.html'],
+    extensions: ['.ts', '.js', '.json', '.css', '.scss', '.html'],
     alias: {
       '@': path.resolve(__dirname, 'client', 'src', 'renderer', 'app')
     }
@@ -95,6 +95,7 @@ const webpackConfig = {
     }),
     new CleanWebpackPlugin(
       [path.resolve(__dirname, output)], {
+        exclude: ['theme.css'],
         root: '',
         verbose: true,
         dry: false,
