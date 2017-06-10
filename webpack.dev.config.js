@@ -123,6 +123,9 @@ const webpackConfig = {
             require('postcss-css-reset')(),
             require('postcss-cssnext')({
               warnForDuplicates: false,
+              features: {
+                customProperties: false
+              }
             }),
             require('postcss-browser-reporter')(),
             require('postcss-reporter')(),
