@@ -38,5 +38,5 @@ Thumbs.db
 /client/public
 
 /ngfactory
-client/app/**/*.js
-client/app/**/*.map
+client/src/**/*.js
+client/src/**/*.map
