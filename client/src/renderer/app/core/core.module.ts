@@ -6,10 +6,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
-import { rootReducer } from '../reducers';
-import { FakeUserService } from '../shared/services/fake-user.service';
-import { PlatformDetector } from '../shared/services/platform-detector.service';
-import { UserActions } from '../actions/user';
+import { rootReducer } from '@/reducers';
+import { FakeUserService } from '@/shared/services/fake-user.service';
+import { PlatformDetector } from '@/shared/services/platform-detector.service';
+import { UserActions } from '@/actions/user';
 
 
 @NgModule({

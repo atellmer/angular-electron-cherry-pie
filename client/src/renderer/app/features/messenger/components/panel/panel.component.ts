@@ -1,4 +1,3 @@
-// Core
 import {
   Component,
   OnInit,
@@ -7,7 +6,6 @@ import {
 } from '@angular/core';
 import { Observable } from 'rxjs';
 
-// Models
 import { IDialog } from '@/shared/models/dialog-item.model';
 
 

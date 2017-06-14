@@ -1,12 +1,10 @@
-// Core
 import {
   Component,
   OnInit,
   Input
 } from '@angular/core';
 
-// Models
-import { IDialog } from '../../../../shared/models/dialog-item.model';
+import { IDialog } from '@/shared/models/dialog-item.model';
 
 
 @Component({

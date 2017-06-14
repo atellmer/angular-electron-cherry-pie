@@ -1,7 +1,6 @@
-
-import { ActionTypes } from '../actions/user';
-import { IUser } from '../shared/models/user.model';
-import { IDialog } from '../shared//models/dialog-item.model';
+import { ActionTypes } from '@/actions/user';
+import { IUser } from '@/shared/models/user.model';
+import { IDialog } from '@/shared//models/dialog-item.model';
 
 
 export interface State {

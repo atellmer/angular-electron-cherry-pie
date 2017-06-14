@@ -6,7 +6,7 @@ import {
   PerfectScrollbarConfigInterface
 } from 'ngx-perfect-scrollbar';
 
-import { UIModule } from '../features/ui';
+import { UIModule } from '@/features/ui';
 
 
 const PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {

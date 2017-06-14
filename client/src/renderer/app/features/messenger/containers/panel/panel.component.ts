@@ -6,10 +6,10 @@ import {
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 
-import * as fromRoot from '../../../../reducers';
-import { UserActions } from '../../../../actions/user';
-import { FakeUserService } from '../../../../shared/services/fake-user.service';
-import { IDialog } from '../../../../shared/models/dialog-item.model';
+import * as fromRoot from '@/reducers';
+import { UserActions } from '@/actions/user';
+import { FakeUserService } from '@/shared/services/fake-user.service';
+import { IDialog } from '@/shared/models/dialog-item.model';
 
 
 @Component({

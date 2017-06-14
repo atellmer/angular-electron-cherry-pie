@@ -6,7 +6,7 @@ import {
 } from '@angular/core';
 
 import { Observable } from 'rxjs';
-import { IUser } from '../../../../shared/models/user.model';
+import { IUser } from '@/shared/models/user.model';
 
 
 @Component({
