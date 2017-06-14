@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 
 import { CoreModule } from './core';
-import { SharedModule } from './shared/shared.module';
+import { SharedModule } from './shared';
 import { RoutingModule } from './routing';
-import { HeaderModule } from './features/header';
-import { MessengerModule } from './features/messenger';
+import {
+  HeaderModule,
+  MessengerModule
+} from './features';
 import { AppComponent } from './app.component';
 
 

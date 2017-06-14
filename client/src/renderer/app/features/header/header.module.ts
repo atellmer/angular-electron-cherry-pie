@@ -1,20 +1,24 @@
 import { NgModule } from '@angular/core';
 
-import { SharedModule } from '../../shared/shared.module';
-import { AppbarContainerComponent } from './containers/appbar';
-import { AppbarComponent } from './components/appbar';
+import { SharedModule } from '@/shared';
+import { AppbarContainerComponent } from './containers';
+import { AppbarComponent } from './components';
+
+
+const COMPONENTS = [
+  AppbarContainerComponent,
+  AppbarComponent
+];
 
 @NgModule({
   imports: [
     SharedModule
   ],
   exports: [
-    AppbarContainerComponent,
-    AppbarComponent
+    ...COMPONENTS
   ],
   declarations: [
-    AppbarContainerComponent,
-    AppbarComponent
+    ...COMPONENTS
   ],
   providers: []
 })

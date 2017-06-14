@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Action } from '@ngrx/store';
 
-import { IUser } from '@/shared/models/user.model';
-import { IDialog } from '@/shared/models/dialog-item.model';
+import {
+  IUser,
+  IDialog
+} from '@/shared/models';
 
 
 export const ActionTypes = {

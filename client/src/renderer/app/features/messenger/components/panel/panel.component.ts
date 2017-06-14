@@ -6,7 +6,7 @@ import {
 } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { IDialog } from '@/shared/models/dialog-item.model';
+import { IDialog } from '@/shared/models';
 
 
 @Component({

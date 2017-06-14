@@ -4,7 +4,7 @@ import {
   Input
 } from '@angular/core';
 
-import { IDialog } from '@/shared/models/dialog-item.model';
+import { IDialog } from '@/shared/models';
 
 
 @Component({

@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '@/shared';
 import { MessengerRoutingModule } from './messenger.routing';
 import { MessengerLayoutComponent } from './layouts';
-import { PanelContainerComponent } from './containers/panel';
-import { PanelComponent } from './components/panel';
-import { CanvasComponent } from './components/canvas';
-import { DialogItemComponent } from './components/dialog-item';
-import { DialogTabsComponent } from './components/dialog-tabs';
+import { PanelContainerComponent } from './containers';
+import {
+  PanelComponent,
+  CanvasComponent,
+  DialogItemComponent,
+  DialogTabsComponent
+} from './components';
 
 
 const COMPONENTS = [
